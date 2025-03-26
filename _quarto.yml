@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "MODEL EVALUATION SYSTEM"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Landing page"
+        href: Landing_page.qmd
+      - text: "Model design"
+        href: Model_design.qmd
+      - text: "Model uploading"
+        href: Model_uploading.qmd
+      - text: "Model Evaluation"
+        href: Model_evaluation.qmd
+      - text: "Model application"
+        href: Model_application.qmd
+      - text: "Progress"
+        href: "Progress.qmd"
+
+  sidebar:
+    - title: "Home"
+      contents: 
+        - index.qmd
+    - title: "Model development"
+      contents:
+        - Modele_design.qmd
+    - title: "Landing page"
+      contents: 
+        - Landing_page.qmd
+    - title: "Model Evaluation"
+      contents: 
+        - Model_evalaution.qmd
+
+
+format:
+  html:
+    theme: cosmo
+    page-layout: article
+    self-contained: true
+    link-external-icon: true
+    link-external-newwindow: true
+    toc: false
+
+editor: visual

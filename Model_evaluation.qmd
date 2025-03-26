@@ -1,0 +1,87 @@
+---
+title: "Model Evaluation"
+date-modified: last-modified
+---
+
+Dear Evaluator, we would your feedback on Species Distribution Models (SDMs). Let's start describing your role and why your interest on evaluating a SMDs, then select the species and start your own pathway of evaluation.
+
+At the end of your evaluation you will received via a summary of all your feedback.
+
+::: panel-tabset
+### 1. Describe your role
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+# Embed single Google form question into Quarto
+
+form_question_embed_markdown <- function(form_url, entry_id, width = 640, height = 100) {
+  if (missing(form_url) || missing(entry_id)) {
+    stop("Please provide the Google Form's embed URL and the question's entry ID.")
+  }
+  
+  question_url <- paste0(form_url, "&single=", entry_id)
+  
+  markdown_code <- paste0(
+    '<iframe src="', question_url, '" width="', width, '" height="', height, '" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>'
+  )
+  return(markdown_code)
+}
+
+
+
+
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+url <- "https://docs.google.com/forms/d/e/1FAIpQLSfcSzayYXswH09Ogp9neDn8SP9AJ9KhUoO2Y0yywCndNwQXtw/viewform"
+question_id <- "M7eMe"
+  
+form_question_embed_markdown(
+   url,
+   question_id,
+   width = 800,
+   height = 150
+ )
+```
+
+Multiple choices????\
+We will provide here the link to Google forms to include name and email.
+
++-------------------+------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------------+
+| User              | Expertise                    | I want to improve the model on this specific issue.. | I want the model to help me..                                                     |
++===================+==============================+======================================================+===================================================================================+
+| Modelers          | Statistician                 | Model statistical assumption                         |                                                                                   |
+|                   |                              |                                                      |                                                                                   |
+|                   | Modeling                     | Evaluate alternative model algorithms                |                                                                                   |
++-------------------+------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Evaluators        | Taxonomic expert             |                                                      | Enhance knowledge of the species range                                            |
+|                   |                              |                                                      |                                                                                   |
+|                   | Survey expert                |                                                      |                                                                                   |
++-------------------+------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Resource managers | Forest Management            |                                                      | Make choices about where to sample in the future (i.e., areas of high uncertainty |
+|                   |                              |                                                      |                                                                                   |
+|                   | Conservation practitioner    |                                                      |                                                                                   |
++-------------------+------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------------+
+
+### 2. Select species
+
+Please select the project + species + region available for evaluation. It will show evaluation status.
+
+See [this link](http://127.0.0.1:7400/){target="_blank"} as example of how it will be.......
+
+### 3. Build your own pathway
+
+We summarize here the model design......For instance,
+
+The [BAM V5 models](https://borealbirds.ca/new-canada-wide-land-bird-density-estimates-version-4-0/) were produced for the purpose of modelling the distribution and abundance of 143 breeding birds in the boreal forest across Canada. The primary purposes of the models are to accurately map the distribution of bird density on the landscape and sum those predictions to estimate population size.
+
++--------------------------------------------------+---------------------------------------+
+| **The model is appropriate for....**             | **Ranking (these are some examples)** |
++--------------------------------------------------+---------------------------------------+
+| Make choices about where to sample in the future | [High]{style="color:green"}           |
++--------------------------------------------------+---------------------------------------+
+
+The landing page of model Evaluation is a series of maps and graphs that evaluators will review and then describe their main findings (e.g., areas with poor predictions here and there) and some feedback
+
+![](Figures/Path_users.jpg)
+:::

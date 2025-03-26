@@ -1,0 +1,126 @@
+---
+title: "Model Development: Design"
+format:
+  html:
+    self-contained: true
+    link-external-icon: true
+    link-external-newwindow: true
+toc: true
+date-modified: last-modified
+editor: visual
+css: styles.css
+---
+
+## Presentation
+
+This section provide some guidance for summarizing information about model development, in particular the designing stage.
+
+Designing a model is a key step in the cycle because allows multiple users and partners to identify the purpose(s) and objective(s) of the model, and also to explicitly share their needs and expectations (we call this ***The context***), incluiding also the species of interest (e.g., single, multiple focal species, etc.), and the geographic area of interest (e.g., national, jurisdictional, etc.).
+
+***The context*** is a high level conversation among potential users aimed to envision the desired utility of the final product. It is the opportunity to distill multiple users' needs and expectations into common ground achievable purpose(s) and objective(s).
+
+The second part in designing a model is setting the stage of what is feasible to implement. That is, identifying key technical elements for its implementation. For instance, inputs required, analysis to perform, and outputs expected (we call this ***The technical component***).
+
+Summarizing *The context* and *The technical component* in this stage provide transparency and effective communication among multiple users. It will also facilitate model evaluation and further actions and applications. Consider these two items the **Metadata** of your project.
+
+Remember, the ideal situation to design the best feasible model option(s) involves the interaction of multiple users (modelers, evaluators and resource managers) .
+
+## The context
+
+::: panel-tabset
+## Purpose(s) & Objective(s)
+
+Identifying the purpose(s) and objective(s) will help multiple users and partner to understand why models are developed for. For instance, we might required models to identify priority areas for conservation, inform forest management activities, predict range expansion/contraction due to climate change and land use change, etc.
+
+In doing so, users might also have different needs and expectations that need to be documented.
+
+Finally, main assumptions, limitations and potential opportunities that might affect expected outputs must be documented.
+
+It is necessary to finalize the exercise by identifying and defining a common purpose & achievable objective(s). See 'Summary' tab.
+
+**Task**: *Identify and define a common purpose & objective(s).*
+
++-----------+----------------------------------------+---------------------------+----------------------+-------------------------------------------------+
+| Users     | Potential role                         | Purpose(s) & Objective(s) | Needs & expectations | Main assumptions, limitations and opportunities |
+|           |                                        |                           |                      |                                                 |
+|           | (Modeler, Evaluator, resource manager) |                           |                      |                                                 |
++===========+========================================+===========================+======================+=================================================+
+| *User 1*  |                                        |                           |                      |                                                 |
++-----------+----------------------------------------+---------------------------+----------------------+-------------------------------------------------+
+| *User 2*  |                                        |                           |                      |                                                 |
++-----------+----------------------------------------+---------------------------+----------------------+-------------------------------------------------+
+| *User n*  |                                        |                           |                      |                                                 |
++-----------+----------------------------------------+---------------------------+----------------------+-------------------------------------------------+
+|           |                                        |                           |                      |                                                 |
++-----------+----------------------------------------+---------------------------+----------------------+-------------------------------------------------+
+
+## Species
+
+List of species and its rationale
+
+| Species list | Rationale |
+|--------------|-----------|
+|              |           |
+|              |           |
+|              |           |
+
+## Geographic area of interest
+
+Is it necessary to circumscribe model implementation to a particular geographic area? if so, what is the rationale?
+
+| Geographic area | Rationale |
+|-----------------|-----------|
+|                 |           |
+
+## Summarizing
+
+Here we summarized this section (purpose(s), objective(s), species, geographic area) into an actionable context. For instance,.......
+
+The [BAM V5 models](https://borealbirds.ca/new-canada-wide-land-bird-density-estimates-version-4-0/) were produced for the purpose of modelling the distribution and abundance of 143 breeding birds in the boreal forest across Canada. The primary purposes of the models are to accurately map the distribution of bird density on the landscape and sum those predictions to estimate population size.
+
++-------------------------------------------------------+---------------------------------------+
+| **The model is appropriate for....**                  | **Ranking (these are some examples)** |
++-------------------------------------------------------+---------------------------------------+
+| Make choices about where to sample in the future      | [High]{style="color:green"}           |
++-------------------------------------------------------+---------------------------------------+
+| Identify areas for conservation/management            | [Low]{style="color:red"} \|           |
++-------------------------------------------------------+---------------------------------------+
+| Enhance understanding of species habitat relationship | [High]{style="color:green"}           |
++-------------------------------------------------------+---------------------------------------+
+| Forest management                                     | [Medium]{style="color:orange"}        |
++-------------------------------------------------------+---------------------------------------+
+| Others                                                |                                       |
++-------------------------------------------------------+---------------------------------------+
+
+References:
+
+-   Sólymos et al (2013) "[Calibrating indices of avian density from non-standardized survey data: making the most of a messy situation](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12106)"
+:::
+
+## The technical component
+
+::: panel-tabset
+## Species data
+
+Describe the type of data (Presence, presence absence, counts), including sources (e.g., eBird, GBIF) and methods of collections (e.g., single observations, surveys, etc.). Please include links, reference or any information relevant.
+
+## Covariates
+
+Describe type of covariates to include in the model, their spatial resolution and temporal and sources.
+
+## Data preparation
+
+Describe the key steps you applied to get data ready for model evaluation (both species and covariates). For instance, species survey data aggregation method, raster reprojections, etc.
+
+## Model fitting
+
+Describe all processes required to fit your model. For instance, multicollinearity, bias, algorithms, model tuning, model performance metrics, etc.
+
+## Predictions
+
+Describe how you present predictions (e.g., calculations, scale) and interpretation.
+
+## Uncertainty
+
+Describe how you you present predictions (e.g., calculations, scale) and interpretation.
+:::

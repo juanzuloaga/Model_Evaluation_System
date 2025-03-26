@@ -1,0 +1,16 @@
+---
+title: "Model Application"
+format:
+  html:
+    self-contained: true
+    link-external-icon: true
+    link-external-newwindow: true
+toc: true
+date-modified: last-modified
+editor: visual
+css: styles.css
+---
+
+We need to
+
+![](Figures/Applications_risk.jpg)

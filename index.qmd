@@ -1,0 +1,368 @@
+---
+format:
+  html:
+    self-contained: true
+    link-external-icon: true
+    link-external-newwindow: true
+toc: true
+date-modified: last-modified
+editor: visual
+css: styles.css
+---
+
+### Interactive tool for model evaluation and decision making
+
+This section requires a review and feedback from Josie, Russ and Elly............!
+
+::: panel-tabset
+## Aim
+
+Design a methodological framework and an interactive tool for model evaluation and application by leveraging knowledge and expertise from multiple users, partners and experts to improve model performance and guide decision making.
+
+Note: Model refers to Species Distribution Models (SDMs) which are numerical tools that combine species occurrences (e.g., presence, presence/absence and counts) with covariates (environmental data sets related to species presence/absence and settlement) to make spatially explicit predictions of habitat suitability or species density, using a variety of algorithms.
+
+**Tool name**
+
+System?? Tool??
+
+Only Evaluation???
+
+Evaluation + decision making ??
+
+Species Distribution Models (SDMs) Evaluation and Application Tool (SDMs-EAT)
+
+Model Evaluation System (MES)
+
+Model Evaluation & Decision System (ME&DS)
+
+Model Evaluation and Decision Support Tool (MET-DSP)
+
+Others.............
+
+## Users
+
+Potential users of this tool are describe below:
+
+![](Figures/Users.jpg)
+
+**Modelers**
+
+Modelers are usually quantitative/spatial analysts/coders experts that co-design, implement, test Species Distribution Models (SDMs). They deliver spatially explicit predictions and their associated uncertainty of multiple species within a geographic area of interest. The predictions of SDMs are usually aimed to identify species potential distribution, habitat suitability, relative density, among others.
+
+**Evaluators**
+
+Evaluators are taxonomic (e.g., birds) and survey experts that possess a deep knowledge and understanding of the ecology, biology and the geographic/environmental context of the species. Their knowledge allows them to review part of and/or the entire model, providing feedback to modelers.
+
+However, there are other experts that might review specific parts of the model. For instance, statisticians can review how modelers are going to treat data sets (e.g., aggregating observations) and rigor in statistical assumptions. Other modelers also can play a significant role in providing feedback on specific aspects of the models (e.g., using alternative algorithms, model tuning, etc.).
+
+**Resource managers**
+
+Resource managers evaluate information needs for multiple applications (e.g., forest management, habitat conservation, co-benefits) and the risk of implementing a specific scenario due to a certain level of uncertainty.
+
+## Scope
+
+**Presentation**
+
+This tool provides the necessary means to effectively implement three fundamental stages in the modelling cycle: development, evaluation and application (see figure and description below):
+
+![](Figures/Landing_Page.jpg)
+
+**Case studies**
+
+We will evaluate SDMs for multiple species from these two projects:
+
+-   Upcoming version 5 (V5) models from the [Boreal Avian Modelling project (BAM)](https://borealbirds.ca/new-canada-wide-land-bird-density-estimates-version-4-0/)
+
+-   The [Ontario Breeding Bird Atlas models (Atlas-3)](https://www.birdsontario.org/).
+
+**Stages**
+
+**1.Model development**
+
+The model development section provides assistance to multiple users in designing and/or uploading a model into the tool for further evaluation.
+
+*Designing the model*
+
+Model design is a fundamental part of the model cycle and it should be done at the beginning of the process. The ideal situation involves the interaction of multiple users (modelers, evaluators and resource managers), discussing and finding common ground on:
+
+-   Model purpose(s), objective(s).
+-   Users needs and expectations.
+
+There is also important to identify and describe key technical elements of the model such as:
+
+-   Inputs required (e.g., focal species, type of data, covariates, scale of the analysis)
+
+-   Potential analysis (e.g., data preparation, algorithms to use,
+
+-   Expected outputs (e.g., predictions, uncertainty)
+
+-   Main assumptions
+
+This is what we might call **MODEL CO-DESIGN**, and we will provide guidance and forms to document and summarize this stage.
+
+However, model co-design is not always possible, that is there is not interaction among multiple users and modelers usually design the model with some relevant information. However, summarizing decisions taken in the designing stage is critical to inform further stages (e.g., model evaluation). Let's call this **SINGLE MODEL-DESIGN.**
+
+*Uploading the model*
+
+The tool will have the means to upload information from model design.
+
+Model inputs, outputs and metadata can be in different formats, such as (rasters, vectors, text, tables, etc.). It requires some expertise to upload data, graphs and tables.
+
+**2.Model evaluation**
+
+The tool will provide users with and interacrive environment to:
+
+-   Review information and provide feedback.
+
+-   Store, analyze, summarize and recommend priority actions
+
+-   Track progress
+
+**3.Model application**
+
+Evaluating and interpreting the effect of model uncertainty for multiple decisions and applications.
+
+## Infrastructure
+
+Preliminary list of tools, software and other means to develop the Model Evaluation Tool:
+
+![](Figures/Tools_infrastructure.jpg)
+
+## Functionality
+
+::: {.callout-note collapse="true"}
+## Upload models (inputs, outputs, metadata)
+
++--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Description                                                                          | What tools/resources could we use to get there?                                                                                                                                                                                           |
++======================================================================================+===========================================================================================================================================================================================================================================+
+| Inputs, outputs and metadata from new models need to be uploaded to some repository. | Repository & Server: ([GC](https://cloud.google.com/?_gl=1*1kageck*_up*MQ..&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxVp8Q9YHEHKKmj8RFUXYnuRmSwEE7FIgfSNCaidLEQOAhqtVzPO8o4aAj93EALw_wcB&gclsrc=aw.ds), [GEE](https://earthengine.google.com/faq/)) |
+|                                                                                      |                                                                                                                                                                                                                                           |
+| Multiple formats: Tables, figures, layers (raster, vector), text                     | [STAC Catalog](https://stacspec.org/en) for layers                                                                                                                                                                                        |
+|                                                                                      |                                                                                                                                                                                                                                           |
+|                                                                                      | [Google Earth Engine](https://earthengine.google.com/faq/) to display layers                                                                                                                                                              |
+|                                                                                      |                                                                                                                                                                                                                                           |
+|                                                                                      | R, Quarto, Shiny app                                                                                                                                                                                                                      |
++--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Upload polygons of interest (?)                                                      |                                                                                                                                                                                                                                           |
++--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Interactive
+
++-----------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| Description                                                     | Examples                                                                | What tools/resources could we use to get there?                                                                   |
++=================================================================+=========================================================================+===================================================================================================================+
+| Data manipulation                                               | Layers: (points, polygons, rasters)                                     | Shinny app                                                                                                        |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | -Turn layers on and off                                                 |                                                                                                                   |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | -Zoom in/out                                                            |                                                                                                                   |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | -Sliders that link layers and graps                                     |                                                                                                                   |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Graphs:                                                                 |                                                                                                                   |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | -Slider to select range of values, threshold                            |                                                                                                                   |
++-----------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| Evaluators provide feedback                                     | Write comments, suggestion, recommendations                             | Google form like embedded in the html                                                                             |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Rank products                                                           | -text                                                                                                             |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Save evaluation temporary and resume later                              | -Quantitative feedback that might have effect on model performance (thresholds, density estimates outliers, etc.) |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Submit and revisit evaluation                                           | Shiny app to select polygons, provide feedback 9e.g., a csv file with polygons Id selected by user???             |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Comments from other evaluators                                          |                                                                                                                   |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Evaluators can select areas in the layer that they may want to comment. |                                                                                                                   |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 | Obtain reports                                                          |                                                                                                                   |
++-----------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| Evaluators will be able to comment on other evaluators feedback |                                                                         | [Stack overflow](https://stackoverflow.co/teams/)                                                                 |
+|                                                                 |                                                                         |                                                                                                                   |
+|                                                                 |                                                                         | Google form questions embebbed throughout the tool.                                                               |
++-----------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Compile, store and synthesize feedback
+
++-----------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Description                                                           | Examples   | What tools/resources could we use to get there?                                                                             |
++=======================================================================+============+=============================================================================================================================+
+| The model evaluation system will structure and retain expert feedback |            | Host                                                                                                                        |
+|                                                                       |            |                                                                                                                             |
+|                                                                       |            | Server                                                                                                                      |
++-----------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Synthesise feedback from experts                                      |            | AI                                                                                                                          |
+|                                                                       |            |                                                                                                                             |
+|                                                                       |            | Markdown and R packages integrating data (see [googlesheets4](https://www.tidyverse.org/blog/2020/05/googlesheets4-0-2-0/)) |
++-----------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Provide guidance
+
++-----------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Scope                 | Examples                                                                                                              |
++=======================+=======================================================================================================================+
+| For model improvement | Priority actions to improve model performance.                                                                        |
++-----------------------+-----------------------------------------------------------------------------------------------------------------------+
+| For decision making   | e.g. forestry management,  assessments of biodiversity co-benefits, cumulative effects, impacts, and other decisions. |
++-----------------------+-----------------------------------------------------------------------------------------------------------------------+
+|                       |                                                                                                                       |
++-----------------------+-----------------------------------------------------------------------------------------------------------------------+
+:::
+
+## Attributes
+
+::: {.callout-note collapse="true"}
+## Spatially explicit
+
+| Scope | Examples |
+|-------|----------|
+|       |          |
+|       |          |
+|       |          |
+:::
+
+::: {.callout-note collapse="true"}
+## Modular
+
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+| Scope                                                                                       | Examples                                                        |
++=============================================================================================+=================================================================+
+| The tool consists of modules and sub-modules responsible for specific functionality.        | A module for loading a model                                    |
+|                                                                                             |                                                                 |
+| This approach promotes the development, maintenance and integrity of all parts of the tool. | A sub-module to display layers (predictions, uncertainty, etc.) |
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Expandable
+
++------------------------------------------------------------------------------------------------+-----------+
+| Scope                                                                                          | Examples  |
++================================================================================================+===========+
+| It allows  scalability, responding to users needs.. It is convenient to manage complex systems |           |
++------------------------------------------------------------------------------------------------+-----------+
+|                                                                                                |           |
++------------------------------------------------------------------------------------------------+-----------+
+|                                                                                                |           |
++------------------------------------------------------------------------------------------------+-----------+
+:::
+
+::: {.callout-note collapse="true"}
+## Purposely & objective driven
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Scope                                                                                                                                                          | Examples                                                                                                                                 |
++================================================================================================================================================================+==========================================================================================================================================+
+| Potential to respond to multiple users/partners' needs and expectations                                                                                        |                                                                                                                                          |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Important for reviewers to understand the objective of end products (and/or the questions intended to be addressed) during their evaluations of model outputs. | Objectives/questions will also determine what needs to be evaluated: e.g., underlying relationship with covariates or just final output. |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                                |                                                                                                                                          |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Generalizable
+
+| Scope | Examples |
+|-------|----------|
+|       |          |
+:::
+
+::: {.callout-note collapse="true"}
+## Reliable & track progress
+
+| Scope                          | Examples |
+|--------------------------------|----------|
+| Established community of users |          |
+| Backed by multiple partners    |          |
+| Measure impact                 |          |
+:::
+
+::: {.callout-note collapse="true"}
+## Hierarchical
+
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| Scope                                                                                                            | Examples                                                                  |
++==================================================================================================================+===========================================================================+
+| Reviewers are able to interact with outputs alone or explore underlying information layers and model if desired. | Multiple types of information are available for display or consideration. |
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+|                                                                                                                  |                                                                           |
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+|                                                                                                                  |                                                                           |
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Comparative
+
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Scope                                                                                                                                          | Examples                                                                                                        |
++================================================================================================================================================+=================================================================================================================+
+| Ability to view multiple data inputs, either side by side or through toggling between layers, to gain a deeper understanding of model outputs. | It is a request to compare predicitons and other data for multiple species (e.g. wetlands birds , forest birds) |
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                |                                                                                                                 |
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                |                                                                                                                 |
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Open source
+
+| Scope | Examples |
+|-------|----------|
+|       |          |
+|       |          |
+|       |          |
+:::
+
+::: {.callout-note collapse="true"}
+## Anonymity
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
+| Scope                                                                                                                                                               | Examples |
++=====================================================================================================================================================================+==========+
+| Make feedback public/viewable to all but anonymous to increase equity among reviewers. However, the model evaluation team should be able to see comment authorship. |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
+|                                                                                                                                                                     |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
+|                                                                                                                                                                     |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
+:::
+
+::: {.callout-note collapse="true"}
+## Effective communication
+
+| Scope | Examples |
+|-------|----------|
+|       |          |
+:::
+
+::: {.callout-note collapse="true"}
+## Friendly
+
++-------------------------------+-------------+
+| Scope                         | Examples    |
++===============================+=============+
+| Easy to navigate and interact |             |
+|                               |             |
+| No coding knowledge required  |             |
++-------------------------------+-------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Transparent
+
+| Scope | Examples |
+|-------|----------|
+|       |          |
+:::
+:::

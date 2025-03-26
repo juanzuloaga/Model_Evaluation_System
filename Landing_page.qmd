@@ -1,0 +1,15 @@
+---
+title: "Landing_page"
+toc: true
+date-modified: last-modified
+editor: visual
+css: styles.css
+---
+
+I suggest a simple landing page where users can select the option that fits their interest.
+
+### This is tool was designed to help multiple users in evaluating Species Distribution Model (SDMs) and informing decision making.
+
+Users can decide where to go from here.....
+
+![](Figures/Landing_Page.jpg)

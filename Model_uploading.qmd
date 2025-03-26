@@ -1,0 +1,34 @@
+---
+title: "Model development: Uploading"
+format:
+  html:
+    self-contained: true
+    link-external-icon: true
+    link-external-newwindow: true
+toc: true
+date-modified: last-modified
+editor: visual
+css: styles.css
+---
+
+## Presentation
+
+Model uploading requires moving your data inputs, outputs and metadata from your local PC to a Model Evaluation System Repository.
+
+::: panel-tabset
+## Metadata
+
+-   **Spatial data**: upload your raster data sets to Google Earth Engine. create a STAC-Catalogue.
+
+## Data sets
+
+-   Upload master tables
+
+## Figures, tables, text
+
+Standardizing type of maps, tables and figures???????????
+
+-   **Tables**: allow users to create their own tables?
+
+-   **Graphs**: Provide script to create graphs or allow user to 1) create their own scripts and graphs 2) upload a .jpg file
+:::
