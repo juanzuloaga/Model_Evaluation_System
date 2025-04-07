@@ -110,7 +110,7 @@ Model inputs, outputs and metadata can be in different formats, such as (rasters
 
 **2.Model evaluation**
 
-The tool will provide users with and interacrive environment to:
+The tool will provide users with and interactive environment to:
 
 -   Review information and provide feedback.
 
@@ -124,9 +124,41 @@ Evaluating and interpreting the effect of model uncertainty for multiple decisio
 
 ## Infrastructure
 
-Preliminary list of tools, software and other means to develop the Model Evaluation Tool:
+General infrastructure and operational modules (tools, software and other means) to develop the Model Evaluation System Tool. Each module is describe below.
 
-![](Figures/Tools_infrastructure.jpg)
+![](Figures/MES_infrastructure.jpg)
+
+**Modules:**
+
+::: {.callout-note collapse="true"}
+#### Managing Spatial data
+
+![](Figures/Spatial_data.jpg)
+:::
+
+::: {.callout-note collapse="true"}
+#### Managing tabular data
+
+![](Figures/Tabular_data.jpg)
+:::
+
+::: {.callout-note collapse="true"}
+## Model Evaluation
+
+![](Figures/Model_Evaluation.jpg)
+:::
+
+::: {.callout-note collapse="true"}
+## Model Application
+
+![](Figures/Model_Application.jpg)
+:::
+
+::: {.callout-note collapse="true"}
+## Assessment
+
+![](Figures/Assessment.jpg)
+:::
 
 ## Functionality
 
@@ -349,13 +381,13 @@ Preliminary list of tools, software and other means to develop the Model Evaluat
 ::: {.callout-note collapse="true"}
 ## Friendly
 
-+-------------------------------+-------------+
-| Scope                         | Examples    |
-+===============================+=============+
-| Easy to navigate and interact |             |
-|                               |             |
-| No coding knowledge required  |             |
-+-------------------------------+-------------+
++-------------------------------+--------------+
+| Scope                         | Examples     |
++===============================+==============+
+| Easy to navigate and interact |              |
+|                               |              |
+| No coding knowledge required  |              |
++-------------------------------+--------------+
 :::
 
 ::: {.callout-note collapse="true"}
