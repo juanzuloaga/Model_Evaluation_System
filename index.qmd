@@ -10,38 +10,26 @@ editor: visual
 css: styles.css
 ---
 
-### Interactive tool for model evaluation and decision making
-
-This section requires a review and feedback from Josie, Russ and Elly............!
+### Interactive tool for model evaluation
 
 ::: panel-tabset
 ## Aim
 
-Design a methodological framework and an interactive tool for model evaluation and application by leveraging knowledge and expertise from multiple users, partners and experts to improve model performance and guide decision making.
+Develop a methodological framework and an interactive tool to evaluate Species Distribution Models (SDMs\*).
 
-Note: Model refers to Species Distribution Models (SDMs) which are numerical tools that combine species occurrences (e.g., presence, presence/absence and counts) with covariates (environmental data sets related to species presence/absence and settlement) to make spatially explicit predictions of habitat suitability or species density, using a variety of algorithms.
+To this aim, the **Model Evaluation Tool (MET)** will leverage and integrate the expertise of multiple modelers, developers, taxonomic and survey experts, and managers with the purpose of improving model performance and predcitions, extracting strategic information and informing decision making.
 
-**Tool name**
+*\* SDMs are numerical tools that combine species occurrences (e.g., presence, presence/absence and counts) with covariates (environmental data sets related to species) to make spatially explicit predictions of habitat suitability or species density, using a variety of algorithms.*
 
-System?? Tool??
+## Approach
 
-Only Evaluation???
+Model evaluators interact with models' outputs, inputs and metadata in at least two non-exclusive ways: providing feedback to the model and extracting information from the model. These interactions are driven by multiple purposes.
 
-Evaluation + decision making ??
+For instance, evaluators might provide feedback on some aspects of the model developed by modelers (e.g., some areas seems to be over predicted) and potentially identified the reasons (e.g., observations used might have strong bias because X,Y, Z). Then, modelers implement adjustments based on such feedback, wich can lead to model improvements in performance, spatial predictions, and potentially reduce spatial uncertainty.
 
-Species Distribution Models (SDMs) Evaluation and Application Tool (SDMs-EAT)
+However, evaluators might also approach models to extract strategic information they can use for their own purposes. For instance, taxonomic experts would like to know where the species is most likely to be found based on model predictions (if they consider predictions are 'good'), then visit those places (that they have not visited yet) to confirm species presence.
 
-Model Evaluation System (MES)
-
-Model Evaluation & Decision System (ME&DS)
-
-Model Evaluation and Decision Support Tool (MET-DSP)
-
-Others.............
-
-## Users
-
-Potential users of this tool are describe below:
+The figure below shows a conceptual framework we used to develop the MET.
 
 ![](Figures/Users.jpg)
 
@@ -51,37 +39,46 @@ Modelers are usually quantitative/spatial analysts/coders experts that co-design
 
 **Evaluators**
 
-Evaluators are taxonomic (e.g., birds) and survey experts that possess a deep knowledge and understanding of the ecology, biology and the geographic/environmental context of the species. Their knowledge allows them to review part of and/or the entire model, providing feedback to modelers.
+Evaluators come from mulitiple dsciplines and expertises**.** For instance, evaluators ca be *taxonomic (e.g., birds)* and *survey experts* that possess a deep knowledge and understanding of the ecology, biology and the geographic/environmental context of the species. Their knowledge allows them to review part of and/or the entire model, providing feedback to modelers.
 
-However, there are other experts that might review specific parts of the model. For instance, statisticians can review how modelers are going to treat data sets (e.g., aggregating observations) and rigor in statistical assumptions. Other modelers also can play a significant role in providing feedback on specific aspects of the models (e.g., using alternative algorithms, model tuning, etc.).
+Evlauators can also review specific parts of the model. For instance, *statisticians* can review how modelers treated data sets (e.g., aggregating observations) and also assess the appropriateness of statistical analysis and the rigor in meeting statistical assumptions. *Other modelers*, unrelated to the model's design, can play a significant role in providing feedback on specific aspects of the models (e.g., alternative algorithms, model tuning, etc.).
 
-**Resource managers**
-
-Resource managers evaluate information needs for multiple applications (e.g., forest management, habitat conservation, co-benefits) and the risk of implementing a specific scenario due to a certain level of uncertainty.
+*Resource managers* can evaluate information needs for multiple applications (e.g., forest management, habitat conservation, co-benefits) when confronting model outputs. They also can assess the risk of implementing a specific scenario due to a certain level of uncertainty.
 
 ## Scope
 
 **Presentation**
 
-This tool provides the necessary means to effectively implement three fundamental stages in the modelling cycle: development, evaluation and application (see figure and description below):
+The ideal Model Evaluation Tool (MET) will have multiple modules to support an adaptive modeling framework and a decision making process. Some of the modules will be functional in the first phase (2025-2026) and others will be developed in a second phase (see figure description below). The core of the MET in this first stage are the Model evaluation and synthesis modules, supported by the model development modules to capture data inputs, outputs and metadata. All of these modules will be integrated in the interactive module to facilitate multiple users navigating, inquiring and reacting to the model in evaluation.
 
-![](Figures/Landing_Page.jpg)
+![](Figures/MET_Modules.jpg){fig-align="center"}
 
 **Case studies**
 
-We will evaluate SDMs for multiple species from these two projects:
-
--   Upcoming version 5 (V5) models from the [Boreal Avian Modelling project (BAM)](https://borealbirds.ca/new-canada-wide-land-bird-density-estimates-version-4-0/)
+We will evaluate SDMs for multiple species from:
 
 -   The [Ontario Breeding Bird Atlas models (Atlas-3)](https://www.birdsontario.org/).
 
-**Stages**
+    However, we will be also testing:
 
-**1.Model development**
+-   The upcoming version 5 (V5) models from the [Boreal Avian Modelling project (BAM)](https://borealbirds.ca/new-canada-wide-land-bird-density-estimates-version-4-0/)
 
-The model development section provides assistance to multiple users in designing and/or uploading a model into the tool for further evaluation.
+## Modules & infrastructure
 
-*Designing the model*
+We are working to develop the infrastructure of the MET. The figure below is our first approximation (We need to update this figure and the following figures).
+
+![](Figures/Tools_infrastructure_test.jpg)
+
+**The Interactive module**
+
+This module integrates all modules and facilitates multiple users navigating, inquiring and reacting to model inputs and outputs. It will be most likely a shiny application (TBD).
+
+**Model development**
+
+The model development section provides assistance to multiple users in designing their model and creating the metadata file (i.e., information about the model). In this stage we will provide also the means to managing and/or uploading spatial and tabular data (see [potential list of inputs, outputs and metadata](https://docs.google.com/document/d/1uyOwWWMrQLy3FudaIarap56AtbVy3PzLj395eDxH2WU/edit?tab=t.0) that developers need to create the interactive tool).
+
+::: {.callout-note collapse="true"}
+## Managing metadata
 
 Model design is a fundamental part of the model cycle and it should be done at the beginning of the process. The ideal situation involves the interaction of multiple users (modelers, evaluators and resource managers), discussing and finding common ground on:
 
@@ -92,55 +89,62 @@ There is also important to identify and describe key technical elements of the m
 
 -   Inputs required (e.g., focal species, type of data, covariates, scale of the analysis)
 
--   Potential analysis (e.g., data preparation, algorithms to use,
+-   Potential analysis (e.g., data preparation, algorithms to use, etc.)
 
 -   Expected outputs (e.g., predictions, uncertainty)
 
 -   Main assumptions
 
-This is what we might call **MODEL CO-DESIGN**, and we will provide guidance and forms to document and summarize this stage.
+This is what we might call model co-design, and we will provide guidance and forms to document and summarize this stage.
 
-However, model co-design is not always possible, that is there is not interaction among multiple users and modelers usually design the model with some relevant information. However, summarizing decisions taken in the designing stage is critical to inform further stages (e.g., model evaluation). Let's call this **SINGLE MODEL-DESIGN.**
-
-*Uploading the model*
-
-The tool will have the means to upload information from model design.
-
-Model inputs, outputs and metadata can be in different formats, such as (rasters, vectors, text, tables, etc.). It requires some expertise to upload data, graphs and tables.
-
-**2.Model evaluation**
-
-The tool will provide users with and interactive environment to:
-
--   Review information and provide feedback.
-
--   Store, analyze, summarize and recommend priority actions
-
--   Track progress
-
-**3.Model application**
-
-Evaluating and interpreting the effect of model uncertainty for multiple decisions and applications.
-
-## Infrastructure
-
-General infrastructure and operational modules (tools, software and other means) to develop the Model Evaluation System Tool. Each module is describe below.
-
-![](Figures/MES_infrastructure.jpg)
-
-**Modules:**
-
-::: {.callout-note collapse="true"}
-#### Managing Spatial data
-
-![](Figures/Spatial_data.jpg)
+However, model co-design is not always possible, so summarizing decisions taken in the designing stage is critical to inform further stages (e.g., model evaluation). [The metadata file](https://docs.google.com/document/d/1BfGmC8uopgqpNw8p-3Pp3IOky_eT_y8kN3-XRCi5jj4/edit?tab=t.0) will provide guidance on how to summarize all elements from the model cycle.
 :::
 
 ::: {.callout-note collapse="true"}
-#### Managing tabular data
+## Managing Spatial data
+
+1.  In this stage of the project we will provide the functionality to upload data sets (raster, vector). That is, R scripts.
+
+2.  Future development includes creating STAC Catalogs, pulling data from data repositories, etc (see Figure below).
+
+    ![](Figures/Spatial_data.jpg)
+:::
+
+::: {.callout-note collapse="true"}
+## Managing tabular data
+
+This module allows users to upload and retrieve matrices, tables, graphs and text. We will provide some R scripts to manipulate data, create graphs.
 
 ![](Figures/Tabular_data.jpg)
 :::
+
+**Model evaluation**
+
+The modules provide users with an interactive environment to provide feedback on model inputs, outputs and metadata, and extract strategic information (see a[list of potential purposes from the model evaluator perspective](https://docs.google.com/spreadsheets/d/1X9aWBEglsdX3KFxEnwaNq414oljZK11UXlov_jxGPtY/edit?gid=0#gid=0) that will drive the extraction of information from the model).
+
+::: {.callout-note collapse="true"}
+## Model evaluation
+
+-   Review information and provide feedback.
+
+-   Store, analyze, summarize and make recommendations
+
+![](Figures/Model_Evaluation.jpg)
+:::
+
+::: {.callout-note collapse="true"}
+## Model synthesis
+
+It will allow elevators to compare their overall ranking evaluation with model performance metrics.
+
+It will also allow evaluators to retrieve the summary of their evaluation, including all feedback provided and a summary of the strategic information.
+
+In future developments, AI will be incorporated to compile and analyze evaluators steps taken in the model evaluation process.
+:::
+
+**Model application**
+
+Evaluating and interpreting the effect of model uncertainty for multiple decisions and applications.
 
 ::: {.callout-note collapse="true"}
 ## Model Evaluation
@@ -151,11 +155,15 @@ General infrastructure and operational modules (tools, software and other means)
 ::: {.callout-note collapse="true"}
 ## Model Application
 
+TBD
+
 ![](Figures/Model_Application.jpg)
 :::
 
 ::: {.callout-note collapse="true"}
 ## Assessment
+
+TBD
 
 ![](Figures/Assessment.jpg)
 :::
@@ -163,21 +171,39 @@ General infrastructure and operational modules (tools, software and other means)
 ## Functionality
 
 ::: {.callout-note collapse="true"}
+## Portability
+
++------------------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                  | Stage 1                                                                                  | Future development                                                                                                                                                        |
+|                  |                                                                                          |                                                                                                                                                                           |
+|                  | (2025-2025)                                                                              |                                                                                                                                                                           |
++==================+==========================================================================================+===========================================================================================================================================================================+
+| Description      | The portable tool will be implemented & tested in this stage.                            | However, we also want in future developments to host the tool                                                                                                             |
++------------------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Innovation       | It can be a shiny app (TBD) and repo GitHub                                              | It can be hosted in a reliable organ                                                                                                                                      |
++------------------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Benefits         | We want to develop a tool that users can install locally and run their own evaluations.  | It can compile evaluations, then analyse the approach multiple evaluators take durin model model evaluation and recurrent and novel areas in the model evaluation cycle.  |
++------------------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
 ## Upload models (inputs, outputs, metadata)
 
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Description                                                                          | What tools/resources could we use to get there?                                                                                                                                                                                           |
-+======================================================================================+===========================================================================================================================================================================================================================================+
-| Inputs, outputs and metadata from new models need to be uploaded to some repository. | Repository & Server: ([GC](https://cloud.google.com/?_gl=1*1kageck*_up*MQ..&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxVp8Q9YHEHKKmj8RFUXYnuRmSwEE7FIgfSNCaidLEQOAhqtVzPO8o4aAj93EALw_wcB&gclsrc=aw.ds), [GEE](https://earthengine.google.com/faq/)) |
-|                                                                                      |                                                                                                                                                                                                                                           |
-| Multiple formats: Tables, figures, layers (raster, vector), text                     | [STAC Catalog](https://stacspec.org/en) for layers                                                                                                                                                                                        |
-|                                                                                      |                                                                                                                                                                                                                                           |
-|                                                                                      | [Google Earth Engine](https://earthengine.google.com/faq/) to display layers                                                                                                                                                              |
-|                                                                                      |                                                                                                                                                                                                                                           |
-|                                                                                      | R, Quarto, Shiny app                                                                                                                                                                                                                      |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Upload polygons of interest (?)                                                      |                                                                                                                                                                                                                                           |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------------+
+| Description                                                                          | What tools/resources could we use to get there?                                                                                                                                                                                           | Stage 1     | Future development |
+|                                                                                      |                                                                                                                                                                                                                                           |             |                    |
+|                                                                                      |                                                                                                                                                                                                                                           | (2025-2025) |                    |
++======================================================================================+===========================================================================================================================================================================================================================================+=============+====================+
+| Inputs, outputs and metadata from new models need to be uploaded to some repository. | Repository & Server: ([GC](https://cloud.google.com/?_gl=1*1kageck*_up*MQ..&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxVp8Q9YHEHKKmj8RFUXYnuRmSwEE7FIgfSNCaidLEQOAhqtVzPO8o4aAj93EALw_wcB&gclsrc=aw.ds), [GEE](https://earthengine.google.com/faq/)) |             |                    |
+|                                                                                      |                                                                                                                                                                                                                                           |             |                    |
+| Multiple formats: Tables, figures, layers (raster, vector), text                     | [STAC Catalog](https://stacspec.org/en) for layers                                                                                                                                                                                        |             |                    |
+|                                                                                      |                                                                                                                                                                                                                                           |             |                    |
+|                                                                                      | [Google Earth Engine](https://earthengine.google.com/faq/) to display layers                                                                                                                                                              |             |                    |
+|                                                                                      |                                                                                                                                                                                                                                           |             |                    |
+|                                                                                      | R, Quarto, Shiny app                                                                                                                                                                                                                      |             |                    |
++--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------------+
+| Upload polygons of interest (?)                                                      |                                                                                                                                                                                                                                           |             |                    |
++--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------------+
 :::
 
 ::: {.callout-note collapse="true"}
