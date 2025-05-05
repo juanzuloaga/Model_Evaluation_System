@@ -1,0 +1,83 @@
+---
+title: "MET_Operational"
+toc: true
+date-modified: last-modified
+editor: visual
+css: styles.css
+---
+
+#### Making the Model Evaluation Tool (MET) operational.
+
+We have decided that the MET workflow will have at least two main steps.
+
+-   The landing page containing two maps predictions and uncertainty.
+
+-   Then, evaluators can define their own path(s) of evaluation within the model cycle.
+
+Users will have the opportunity to review and analyse information about the model, provide feedback and extract strategic information according to their purpose of evaluation.
+
+![](Figures/Path_users.jpg)
+
+#### The landing page
+
+The figure below shows an example of the interaction between model evaluators and the model information in the landing page.
+
+-   If users select PREDICITONS, the information (metadata) and TASKS to provide feedback will show up.
+
+-   In the first twoTASKS the evaluators provide the main purpose that motivates theer evaluation and contrast it with the modelers proposed purpose(s).
+
+-   Evaluators can provide feedback on various aspects of model predictions. We will provide the functionality to select areas (maybe polygons of sub-bains, ecodistricts, etc.) where model predictions are too high or too low, and save their ID as a .csv file (and an figure for the final report).
+
+-   Evaluators can also extract information they can be interested in.
+
+-   Feedback, metadata and information extracted by evaluators will be summarized in a report.
+
+-   Same process for uncertainty.
+
+-   We should have a SAVING button functionality.
+
+![](Figures/Landing_page.jpg)
+
+#### Classifying appropriateness for each evaluators purpose
+
+One approach is that modelers pre-classify the appropriateness of some attributes of the model for each evaluators purpose. For instance:
+
+The evaluator wants to see where the species is likely to be found and visit the sites. So, the modeler can pre-classify these attributes (let's say the spatial resolution is coarse).
+
+| Attribute              | High | Moderate | Low (inappropriate)           |
+|------------------------|------|----------|-------------------------------|
+| Spatial resolution     |      |          | [red flag]{style="color:red"} |
+| Spatial extent         |      |          |                               |
+| Temporal extent        |      |          |                               |
+| Number of surveys      |      |          |                               |
+| Number of observations |      |          |                               |
+|                        |      |          |                               |
+|                        |      |          |                               |
+
+The question is: Can we list all attributes? Then modeler classify them for a specific evaluator's purpose and then for all purposes. The issues is: if the evaluator propose a new purpose, there is no pre-classify table of attributes to guide the evaluator.
+
+#### Some general alternatives to inform evaluators.
+
+There are multiple pieces of information that can be considered to evaluate model usefulness, including: the number of observations used in the model, model performance metrics (e.g., omission rate and AUC values), the spatial distribution of model uncertainty and the evaluation of empirical models against null models (i.e., comparing to the same performance metrics calculated on null models built with random data).
+
+The table below is intended to guide users on model usefulness based on the minimum number of observations and model performance metrics. We can add more attributes (spatial extent, temporal extent, etc.), then the evaluator can see the full picture).
+
+-   Model predictions can be [informative]{style="color:green"}.
+
+-   There is [some concern]{style="color:orange"} in model predictions.
+
+-   There is [high concern]{style="color:red"} in model predictions.
+
+This is an example:
+
+![](Figures/model%20usefulness.png){fig-align="center" width="500"}
+
+-   **Minimum number of observations**: for minimum number of observations we considered two values:
+
+    -   Some studies have suggested that 14 is the minimum number of observations required for range restricted species [(van Proosdij et al 2015)](https://onlinelibrary.wiley.com/doi/10.1111/ecog.01509).
+
+    -   There is also a general rule of thumb that the minimum number of occurrences should be 10 times larger the number of variable predictors to reduce model overfitting ([Harrell et al 1996](https://www.scinapse.io/papers/2108191500)). That is, number of observations = **15**; number of predictors = **16**; and, minimum number of observations required (10 x Predictors) = **160**.
+
+-   **Omission rate** indicates the "fraction of the test localities that fall into pixels not predicted as suitable for the species. A low omission rate is a necessary (but not sufficient) condition for a good model."([Phillips et al., 2006](https://www.sciencedirect.com/science/article/abs/pii/S030438000500267X)). There is no thresholding rule developed yet to determine the optimal threshold for the omission rate, so we suggest this provisional relative scale (is the model potentially useful?): (0 - 0.25, the model can be informative; 0.25 - 0.50, there is some concern in model predictions; \> 0.50 there is high concern in model predictions). Omission rate values(or.10p.avg) = **0.13**
+
+-   **AUC values** are "the probability that a random positive instance and a random negative instance are correctly ordered by the classifier." ([Phillips et al., 2006](https://www.sciencedirect.com/science/article/abs/pii/S030438000500267X)). AUC values above 0.75 are considered potentially useful [(Elith. 2002](https://link.springer.com/chapter/10.1007/0-387-22648-6_4)and [Phillips and Dudík 2008)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.0906-7590.2008.5203.x). AUC values(auc.val.avg) = **0.98**
