@@ -10,12 +10,17 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "MET_operational"
+        href: MET_operational.qmd
       
 
   sidebar:
     - title: "Home"
       contents: 
         - index.qmd
+    - title: "MET_operational"
+      contents: 
+        - MET_operational.qmd
    
 
 format:
