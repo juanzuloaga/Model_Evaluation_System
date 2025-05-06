@@ -24,7 +24,7 @@ The figure below shows an example of the interaction between model evaluators an
 
 -   If users select PREDICITONS, the information (metadata) and TASKS to provide feedback will show up.
 
--   In the first twoTASKS the evaluators provide the main purpose that motivates theer evaluation and contrast it with the modelers proposed purpose(s).
+-   In the first two TASKS the evaluators provide the main purpose that motivates theer evaluation and contrast it with the modelers proposed purpose(s).
 
 -   Evaluators can provide feedback on various aspects of model predictions. We will provide the functionality to select areas (maybe polygons of sub-bains, ecodistricts, etc.) where model predictions are too high or too low, and save their ID as a .csv file (and an figure for the final report).
 
@@ -55,6 +55,12 @@ The evaluator wants to see where the species is likely to be found and visit the
 |                        |      |          |                               |
 
 The question is: Can we list all attributes? Then modeler classify them for a specific evaluator's purpose and then for all purposes. The issues is: if the evaluator propose a new purpose, there is no pre-classify table of attributes to guide the evaluator.
+
+I just added this figure.... Let me explain
+
+![](Figures/Confronting purposes.jpg){fig-align="center"}
+
+![](Figures/steps_eval.jpg){fig-align="center"}
 
 #### Some general alternatives to inform evaluators.
 
