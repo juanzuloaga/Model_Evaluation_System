@@ -12,7 +12,9 @@ website:
         href: index.qmd
       - text: "MET_operational"
         href: MET_operational.qmd
-      
+      - text: "Glossary"
+        href: glossary.qmd
+
 
   sidebar:
     - title: "Home"
@@ -21,8 +23,10 @@ website:
     - title: "MET_operational"
       contents: 
         - MET_operational.qmd
-   
-
+    - title: "Glossary"
+      contents: 
+      - glossary.qmd
+      
 format:
   html:
     theme: cosmo
@@ -30,6 +34,12 @@ format:
     self-contained: true
     link-external-icon: true
     link-external-newwindow: true
-    toc: false
+    toc: true
+
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true
 
 editor: visual
+
